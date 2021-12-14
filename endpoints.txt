@@ -1,0 +1,29 @@
+Que endpoints ofrecemos:
+
+    -- USUARIOS --
+        -> /createuser : crea un usuario. (DONE)
+        -> /login : hace el loggin de un usuario. (DONE)
+        -> /users : me lista todos los usuarios. (DONE) // /user/{userid}?
+        -> /user/{my_id}/follow/{to_follow_id} : sigue al usuario con id = to_follow_id. (DONE)
+        -> /user/{my_id}/unfollow/{to_follow_id} : deja de seguir al usuario con id = to_follow_id. (DONE)
+        -> /getuserid/{username} : obtenes el id del usuario con nombre = username. (DONE)
+        -> /users/notfollowing/{my_id} : devuelve las personas que no sigue el usuario con id=my_id (DONE)
+        -> /users/followedBy/{my_id} : devuelve las personas que siguen a el usuario con id=my_id (DONE)
+        -> /user/{user_id}/events : devuelve los eventos a los que asistira el usuario (DONE)
+
+    -- EVENTOS --
+        -> /createevent : crea un evento. (DONE)
+        -> /events/{my_id} : lista todos los eventos que no fueron creados por el usuario con id=my_id. (DONE)
+        -> /myevents/{my_id} : lista de eventos que fueron creados por el usuario con id=my_id (DONE)
+        -> /event/{event_id}/user/{user_id}/attend : usuario asiste a evento con id = event_id. (DONE)
+        -> /event/{event_id}/user/{user_id}/decline : usuario no asiste a evento con id = event_id. (DONE) (NO SE USAN)
+        -> /event/{event_id}/user/{user_id}/dontknow : usuario no sabe si asiste a evento con id = event_id. (DONE) (NO SE USAN)
+        -> /event/{event_id}/user/{user_id}/delete : borra el evento con event_id y user_id de tanto la tabla de eventos como de asistencias. (DONE)
+        -> /event/{event_id}/user/{my_id}/participants : invitados a eventos (DONE)
+
+    -- NEO4J --
+        -> /countFollowers/{user_id} : cuenta los seguidores del user_id (DONE)
+        -> /countFollowing/{user_id} : cuenta la cantidad de personas que siguen al user_id (DONE)
+        -> /user/{my_id}/friendsOfFriends/{user_id} : devuelve los amigos de amigos (DONE)
+
+

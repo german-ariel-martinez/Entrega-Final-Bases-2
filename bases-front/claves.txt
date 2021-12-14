@@ -1,0 +1,16 @@
+Vertical - align: start, center, end, baseline, stretch
+Horizontal - justify: start, cener, end, space-around, space-between
+
+Vertical Alignment: 
+<v-row align="start"></v-row> // top
+<v-row align="center"></v-row> // middle
+<v-row align="end"></v-row> // bottom
+<v-row align="stretch"></v-row> // fill height
+
+
+Horizontal Justification:
+<v-row justify="start"></v-row> // left
+<v-row justify="center"></v-row> // center
+<v-row justify="end"></v-row> // right
+<v-row justify="space-around"></v-row> // centered - spaced evenly around
+<v-row justify="space-between"></v-row> // not centered - spaced evenly between
