@@ -1,4 +1,5 @@
-# Trabajo Practico Especial - Base de Datos 2
+# Peopoole, ¡La nueva red social!
+### Trabajo Practico Especial - Base de Datos 2
 
 ## Contenido
 1. Idea Principal.
