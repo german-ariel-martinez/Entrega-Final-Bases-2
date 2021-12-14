@@ -74,13 +74,6 @@ def get_participants(event_id: int, my_id: int):
     join_res = users.join(assist, assist.c.user_id == users.c.user_id)
     select_st=select([users.c.user_id,users.c.username,users.c.description,users.c.age,users.c.sex, users.c.instagram,users.c.facebook,users.c.twitter,users.c.linkedin]).select_from(join_res).where(assist.c.event_id == event_id, users.c.user_id != my_id)
     res =conn.execute(select_st).fetchall()
-    select_st2 = select([events.c.host]).select_from(events).where(events.c.event_id == event_id)
-    host_id = conn.execute(select_st2).fetchone()
-    print(host_id.host)
-    select_st3=select([users.c.user_id,users.c.username,users.c.description,users.c.age,users.c.sex, users.c.instagram,users.c.facebook,users.c.twitter,users.c.linkedin]).select_from(users).where(users.c.user_id == host_id.host)
-    host = conn.execute(select_st3).fetchone()
-    print(host)
-    res.append(host)
     return {"status":1, "detail":{"res":res}}
 
 

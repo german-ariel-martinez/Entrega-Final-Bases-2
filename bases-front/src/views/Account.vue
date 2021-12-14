@@ -37,6 +37,7 @@
         <v-row justify="center" class="ma-2">
           <h1 class="display-1">Tus amigos</h1>
         </v-row>
+        <div v-if="users.length>0">
         <div class="ma-5" v-for="user in users" :key="user.user_id">
           <v-card dark shaped class="mb-2">
             <v-card-title>
@@ -127,12 +128,21 @@
             </v-card-text>
           </v-card>
         </div>
+        </div>
+        <div v-else>
+            <v-card dark shaped>
+                <v-card-title>
+                    <v-row justify="center">Todavia no seguiste a ningun usuario.</v-row>
+                </v-card-title>
+            </v-card>
+        </div>
       </v-col>
       <v-divider vertical></v-divider>
       <v-col cols="6">
         <v-row justify="center" class="ma-2">
           <h1 class="display-1">Tus eventos creados</h1>
         </v-row>
+        <div v-if="events.length>0">
         <div class="ma-5" v-for="event in events" :key="event.event_id">
           <v-card dark shaped class="mb-2">
             <v-card-title>
@@ -168,6 +178,14 @@
               </v-card>
             </v-card-text>
           </v-card>
+        </div>
+        </div>
+        <div v-else>
+            <v-card dark shaped>
+                <v-card-title>
+                    <v-row justify="center">Todavia no creaste ningun evento.</v-row>
+                </v-card-title>
+            </v-card>
         </div>
       </v-col>
     </v-row>

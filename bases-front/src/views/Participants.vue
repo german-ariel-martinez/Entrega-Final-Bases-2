@@ -5,6 +5,7 @@
                 <v-row justify="center" class="ma-2">
                 <h1 class="display-1">Personas que asistiran</h1>
                 </v-row>
+                <div v-if="users.length>0">
                 <div class="ma-5" v-for="user in users" :key="user.user_id">
                 <v-card dark shaped class="mb-2">
                     <v-card-title>
@@ -91,6 +92,7 @@
                             <v-list dense>
                                 <div v-for="elem in fof" :key="elem.id">
                                     <div v-if="elem.id==user.user_id">
+                                        <div v-if="elem.fof.length>0">
                                         <v-list-item-group v-for="aux in elem.fof" :key="aux.user_id">
                                             <v-list-item v-if="!aux.fof">
                                                 <v-list-item-icon>
@@ -101,6 +103,15 @@
                                                 </v-list-item-content>
                                             </v-list-item>
                                         </v-list-item-group>
+                                        </div>
+                                        <div v-else>
+                                            <v-list-item-group>
+                                                <v-list-item>
+                                                    <v-list-item-content>No tienes amigos en comun
+                                                    </v-list-item-content>
+                                                </v-list-item>
+                                            </v-list-item-group>
+                                        </div>
                                     </div>
                                 </div>
                             </v-list>
@@ -108,6 +119,13 @@
                     </v-card>
                     </v-card-text>
                 </v-card>
+                </div></div>
+                <div v-else>
+                    <v-card dark shaped>
+                        <v-card-title>
+                            <v-row justify="center">Todavia nadie asistira a este evento.</v-row>
+                        </v-card-title>
+                    </v-card>
                 </div>
             </v-col>
         </v-row>
@@ -137,7 +155,8 @@
                 .then(response => {
                     let ans = response.data.detail.res
                     for( var i = 0; i< this.fof.length ; i++){
-                        console.log(this.fof[i].id + " <-> " + this.users[j].user_id)
+                        console.log("ans: ")
+                        console.log(ans)
                         if(this.fof[i].id == this.users[j].user_id){
                             console.log(ans)
                             this.fof[i].fof = ans
