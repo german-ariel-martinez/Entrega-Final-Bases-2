@@ -17,7 +17,7 @@
               <v-col>
                 <!-- email -->
                 <v-text-field
-                  v-model="email"
+                  v-model="email_r"
                   label="Ingrese su email"
                   outlined
                   :rules="emailRules"
@@ -26,7 +26,7 @@
                 ></v-text-field>
                 <!-- password -->
                 <v-text-field
-                  v-model="password"
+                  v-model="password_r"
                   :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
                   :rules="[rules.required, rules.min]"
                   :type="show1 ? 'text' : 'password'"
@@ -183,6 +183,8 @@
           email:'',
           password: '',
           username: '',
+          password_r: '',
+          email_r: '',
           sex: '',
           age: 18,
           description: '',
