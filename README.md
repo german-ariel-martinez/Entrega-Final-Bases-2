@@ -28,9 +28,9 @@ Si usted esta trabajando en un sistema operativo de Linux lo unico que recomenda
 Primero es necesario instalar ambas bases de datos via docker, para esto ejecutamos los siguientes comandos:
 
 ### PostgreSQL:
-docker run --name "nombre de la imagen en docker" -e POSTGRES_PASSWORD=<mysecretpassword> -p 5432:5432 -d postgres
+` ` `docker run --name "nombre de la imagen en docker" -e POSTGRES_PASSWORD=<mysecretpassword> -p 5432:5432 -d postgres` ` `
 ### Neo4J:
-docker run --name "nombre de la imagen en docker" -p 7474:7474 -p 7687:7687 --env=NEO4J_AUTH=none -d neo4j
+` ` `docker run --name "nombre de la imagen en docker" -p 7474:7474 -p 7687:7687 --env=NEO4J_AUTH=none -d neo4j` ` `
 
 Luego de tener ambas bases de datos corriendo deberia verse algo de este estilo en Docker Desktop:
   
@@ -40,17 +40,17 @@ Una vez logrado lo anterior crear en Postgres una base de datos llamada "bases2"
   
 Luego de hacer todo lo anterior lo que queda es correr la aplicacion, para hacer esto:
 1. Clonar el repositorio de github en su computadora.
-2. Desde la terminal de Anaconda correr el comando "conda activate tp-bases", luego ejecute "code ." para abrir Visual Studio Code en la carpeta del proyecto (en la primer imagen notar como cambia el entorno de trabajo, remarcado en rojo). Puede que tenga que cambiar el interprete de VS Code al de la version de Python que esta corriendo en el entorno creado por anaconda, para esto ir a la parte inferior de VS Code y cambiarlo, deberia ver algo como lo que se muestra en la segunda imagen:
+2. Desde la terminal de Anaconda correr el comando ` ` `conda activate tp-bases` ` `, luego ejecute ` ` `code .` ` ` para abrir Visual Studio Code en la carpeta del proyecto (en la primer imagen notar como cambia el entorno de trabajo, remarcado en rojo). Puede que tenga que cambiar el interprete de VS Code al de la version de Python que esta corriendo en el entorno creado por anaconda, para esto ir a la parte inferior de VS Code y cambiarlo, deberia ver algo como lo que se muestra en la segunda imagen:
   
   ![image](https://user-images.githubusercontent.com/18686695/146067629-7f23da7f-5104-4942-a34b-6fff7e97c95a.png)
   
   ![image](https://user-images.githubusercontent.com/18686695/146067949-17488dca-07c0-448d-ab4d-06b29209035a.png)
 
-3. Dentro del proyecto en Python correr "uvicorn app:app --reload" para correr la API. La API corre en el puerto 8000 de su computadora, para acceder a los endpoints puede hacer "localhost:8000/docs", sabra que esta corriendo si ve algo como esto:
+3. Dentro del proyecto en Python correr ` ` `uvicorn app:app --reload` ` ` para correr la API. La API corre en el puerto 8000 de su computadora, para acceder a los endpoints puede hacer "localhost:8000/docs", sabra que esta corriendo si ve algo como esto:
   
   ![image](https://user-images.githubusercontent.com/18686695/146068459-993ae6d4-ec98-4518-aea0-6462cae560df.png)
 
-4. Ahora queda correr la web-app, para esto vaya a la terminal de Cmder (o la que usted elija) y vaya a la carpeta "bases-front" dentro del proyecto, una vez dentro ejecute el comando "npm run serve", debera ver algo como esto cuando la pagina este corriendo:
+4. Ahora queda correr la web-app, para esto vaya a la terminal de Cmder (o la que usted elija) y vaya a la carpeta "bases-front" dentro del proyecto, una vez dentro ejecute el comando ` ` `npm run serve` ` `, debera ver algo como esto cuando la pagina este corriendo:
   
   ![image](https://user-images.githubusercontent.com/18686695/146068764-02583472-798e-4073-81a3-94393411873d.png)
 
