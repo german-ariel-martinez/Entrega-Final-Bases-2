@@ -60,4 +60,3 @@ Luego de hacer todo lo anterior lo que queda es correr la aplicacion, para hacer
   - Joaquin Garcia del Rio (59051).
   - German Ariel Martinez (58574).
   - Santiago Preusche (59233).
-
