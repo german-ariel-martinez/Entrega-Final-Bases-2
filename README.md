@@ -1,7 +1,7 @@
 # Peopoole, ¡La nueva red social!
 ### Trabajo Practico Especial - Base de Datos 2
 
-## 4 - Integrantes del trabajo:
+## Integrantes del trabajo:
   - Joaquin Garcia del Rio (59051).
   - German Ariel Martinez (58574).
   - Santiago Preusche (59233).
@@ -10,7 +10,6 @@
 1. Idea Principal.
 2. Estructura del trabajo.
 3. Instructivo de instalación.
-4. Integrantes del trabajo.
 
 ## 1 - Idea principal:
 Para este trabajo se nos pidio solucionar un problema (a elección) en el cual la solución al mismo sea utilizando 2 bases de datos distintas. El problema que seleccionamos consiste en crear una red social que permita asistir y auspiciar eventos públicos. Tambien se espera que por medio de esta aplicación los usuarios puedan conocer a otras personas para luego mantenerse en contacto. La solución que se propuso se basa en la idea de utilizar PostgreSQL y Neo4J para persistir datos y relaciones de los usuarios.
