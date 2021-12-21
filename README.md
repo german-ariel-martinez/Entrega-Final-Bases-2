@@ -1,6 +1,11 @@
 # Peopoole, ¡La nueva red social!
 ### Trabajo Practico Especial - Base de Datos 2
 
+## 4 - Integrantes del trabajo:
+  - Joaquin Garcia del Rio (59051).
+  - German Ariel Martinez (58574).
+  - Santiago Preusche (59233).
+
 ## Contenido
 1. Idea Principal.
 2. Estructura del trabajo.
@@ -56,8 +61,3 @@ Luego de hacer todo lo anterior lo que queda es correr la aplicacion, para hacer
   ![image](https://user-images.githubusercontent.com/18686695/146068764-02583472-798e-4073-81a3-94393411873d.png)
 
 ¡Listo! Ya puede acceder a la página utilizando la dirección que se muestra en la imagen anterior.
-  
-## 4 - Integrantes del trabajo:
-  - Joaquin Garcia del Rio (59051).
-  - German Ariel Martinez (58574).
-  - Santiago Preusche (59233).
